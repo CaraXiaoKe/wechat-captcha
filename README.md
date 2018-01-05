@@ -1,5 +1,5 @@
 ## 页面结构文件wxm中引入canvas节点
-    <canvas bindtouchend="onTap" style="width:{{cvs.width}};height:{{cvs.height}};" canvas-id="canvas"></canvas>
+    <canvas bindtouchend="onTap" style="width:{{cvs.width}}px;height:{{cvs.height}}px;" canvas-id="canvas"></canvas>
 ## 页面逻辑文件js中引入mcaptcha
     假设mcaptcha.js文件放在utils下边
     let Mcaptcha = require('../../utils/mcaptcha.js');
