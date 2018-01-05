@@ -11,10 +11,11 @@ module.exports = class Mcaptcha {
     this.refresh(this.options.code);
   }
   refresh(code) {
+    this.options.code = code+''; 
     this.ctx.clearRect(0, 0, this.options.width, this.options.height);
     this.ctx.setFillStyle(this.randomColor(180, 240));
     this.ctx.fillRect(0, 0, this.options.width, this.options.height);
-    let arr = (code + '').split('');
+    let arr = this.options.code.split('');
     if (arr.length === 0) {
       arr = ['e', 'r', 'r','o','r'];
     };
