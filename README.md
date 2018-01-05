@@ -4,11 +4,17 @@
     假设mcaptcha.js文件放在utils下边
     let Mcaptcha = require('../../utils/mcaptcha.js');
     ............
+    data:{
+        cvs:{
+            width:120,
+            height:35
+        }
+    },
     onReady: function () {
         this.mcaptcha = new Mcaptcha({
             el: 'canvas',
-            width: 120,
-            height: 40,
+            width: this.data.cvs.width,
+            height: this.data.cvs.height,
             code: "afced"
         );
     },
