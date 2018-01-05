@@ -3,16 +3,13 @@ module.exports = class Mcaptcha {
     this.options = options;
     this.fontSize = options.height * 3 / 4;
     this.offsetTop = options.height*0.5;
-    this.init();
-  }
-  init() {
     this.ctx = wx.createCanvasContext(this.options.el);
-    this.ctx.setTextBaseline("middle");
     this.refresh(this.options.code);
   }
   refresh(code) {
     this.options.code = code+''; 
     this.ctx.clearRect(0, 0, this.options.width, this.options.height);
+    this.ctx.setTextBaseline("middle");
     this.ctx.setFillStyle(this.randomColor(180, 240));
     this.ctx.fillRect(0, 0, this.options.width, this.options.height);
     let arr = this.options.code.split('');
