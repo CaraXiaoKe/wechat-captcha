@@ -1,8 +1,8 @@
-## wxm中引入节点
+## 页面结构文件wxm中引入canvas节点
     <canvas style="width:{{cvs.width}};height:{{cvs.height}};" canvas-id="canvas"></canvas>
-## 引入组件
+## 页面逻辑文件js中引入mcaptcha
     假设mcaptcha.js文件放在utils下边
-     Mcaptcha = require('../../utils/mcaptcha.js');
+    let Mcaptcha = require('../../utils/mcaptcha.js');
     ............
     onReady: function () {
         this.mcaptcha = new Mcaptcha({
